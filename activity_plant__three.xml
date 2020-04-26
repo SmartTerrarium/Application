@@ -6,60 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".Plant_Three">
 
+    <EditText
+        android:id="@+id/plantTitle3"
+        android:layout_width="206dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:hint="Plant 3"
+        android:textColorHint="#00BCD4"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/moisture3"
+        app:layout_constraintEnd_toStartOf="@+id/titleBtn3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
+
     <TextView
-        android:id="@+id/moisture"
+        android:id="@+id/moisture3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="220dp"
         android:text="Moisture Levels: "
         android:textColor="#009688"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/temp3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/light3"
+        android:id="@+id/moistureSetting3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:text="Light Exposure Today: "
-        android:textColor="#8BC34A"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Moisture Setting: "
+        android:textColor="#009688"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moistureRead3" />
 
     <TextView
         android:id="@+id/temp3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginBottom="120dp"
         android:text="Temperature: "
         android:textColor="#4CAF50"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/light3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText3"
+    <TextView
+        android:id="@+id/light3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Plant 3"
-        android:textColor="#00BCD4"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/moisture"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="150dp"
+        android:text="Light Exposure Today: "
+        android:textColor="#8BC34A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/moistureRead3"
@@ -69,12 +91,10 @@
         android:text="TextView"
         android:textColor="#009688"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/temp3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moisture"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/moisture3" />
 
     <TextView
         android:id="@+id/tempRead3"
@@ -105,4 +125,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/light3"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/moistureWrite3"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#009688"
+        android:hint="Setting"
+        android:textColorHint="#009688"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/temp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moistureSetting3"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/sendBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="35dp"
+        android:background="#009688"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="send"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal|bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/temp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/moistureWrite3"
+        app:layout_constraintTop_toBottomOf="@+id/moistureSetting3" />
+
+    <Button
+        android:id="@+id/titleBtn3"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00BCD4"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="Edit Title"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal|bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/moisture3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
